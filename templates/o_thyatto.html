@@ -1,0 +1,28 @@
+{% extends 'o_base.html' %}
+{% block content %}
+<h1>チャット画面</h1>
+
+<p>今日のテーマ     : {{tema}}</p>
+<p>みなさんへの質問 : {{question}}</p>
+
+
+{% for answer_list in answer_list%}
+<p>-------------------------------------------------------------</p>
+<p>  {{answer_list["color_id"]}}色さんのアンケート回答 →「 {{answer_list["answer"]}} 」</p>
+<p>-------------------------------------------------------------</p>
+<br>
+{% endfor %}
+
+{% for comment_list in comment_list%}
+<p>-------------------------------------------------------------</p>
+<p>  {{comment_list["color_id"]}}色さんの発言 →「 {{comment_list["comment"]}} 」</p>
+<p>-------------------------------------------------------------</p>
+<br>
+{% endfor %}
+
+<form action="/comment" method="POST">
+    <input type="text" name="comment" size="20" maxlength="20" style="width:30%; height:30px">
+    <input type="submit" value="発言" name="save">
+</form><br>
+
+{% endblock %}

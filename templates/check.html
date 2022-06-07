@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<p>今週の質問はこちら！</p>
+<p>人数調整中です、チャットが始まるまで回答を考えて待っててね！!</p>
+
+<body>
+    <div class="content">
+        <button class="js-modal-open" href="">アンケートを記入</button>
+    </div>
+    <div class="modal js-modal">
+        <div class="modal__bg js-modal-close"></div>
+        <div class="modal__content">
+
+            <p>以下の質問に答えてください！</p>
+            <p>"Q.{{"ここに虫食いでテーマごとの質問が入る。例/家で飼っているペットはなんですか？"}}"</p>
+            <br><br><br>
+
+            <form action="/answer" method="POST">
+            <input type="text" name="answer" size="20" maxlength="20">
+            <input type="submit" value="アンケートを送信" name="save">
+            </form>
+
+            <br><br>
+            <a class="js-modal-close" href="">戻る</a>
+        </div><!--modal__inner-->
+    </div><!--modal-->
+</body>
+
+{% endblock %}

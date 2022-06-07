@@ -1,0 +1,9 @@
+{% extends 'o_base.html' %}
+{% block content %}
+<h1>OMOCHI TOP画面</h1><br>
+<p>待機画面へ移動するかたは入室ボタンを押してください</p><br>
+<form action="/entering" method="GET">
+    <input type="submit" value="入室">
+</form>
+<br>
+{% endblock %}

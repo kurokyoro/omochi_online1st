@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<p>"Q.{{"ここに虫食いでテーマごとの質問が入る。例/家で飼っているペットはなんですか？"}}"</p>
+
+
+{% for answer_list in answer_list%}
+<p>-------------------------------------------------------------</p>
+<p>  {{answer_list["id"]}}さんのアンケート回答 →「 {{answer_list["answer"]}} 」</p>
+<p>-------------------------------------------------------------</p>
+<br>
+{% endfor %}
+
+{% for comment_list in comment_list%}
+<p>-------------------------------------------------------------</p>
+<p>  {{comment_list["user_id"]}}さんの発言 →「 {{comment_list["comment"]}} 」</p>
+<p>-------------------------------------------------------------</p>
+<br>
+{% endfor %}
+
+<form action="/comment" method="POST">
+    <input type="text" name="comment" size="20" maxlength="20" style="width:30%; height:30px">
+    <input type="submit" value="発言" name="save">
+</form><br>
+
+{% endblock %}

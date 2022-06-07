@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <!-- かまくらからの連想で制作ではomochiってよんでます -->
+
+
+<link rel="stylesheet" type="text/css" media="screen and ( min-width:769px )" href="{{ url_for('static', filename='css/style_pc.css') }}">
+<link rel="stylesheet" type="text/css" media="screen and ( max-width:768px )" href="{{url_for('static',filename='css/style_sp.css')}}">
+
+
+<p class="end">今週もありがとうございました！</p>
+<p class="end">また来週も来てね！！</p>
+
+<div class="omochi">
+    <img src="/static/sozai/omochi.png" >
+</div>
+
+{% endblock %}

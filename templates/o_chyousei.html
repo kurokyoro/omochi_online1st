@@ -1,0 +1,33 @@
+{% extends 'o_base.html' %}
+{% block content %}
+<h1>待機画面</h1>
+
+   
+<!-- 以下question_mordal OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO-->
+<body>
+    <div class="content">
+        <button class="js-modal-open" href="">アンケートを記入</button>
+    </div>
+    <div class="modal js-modal">
+        <div class="modal__bg js-modal-close"></div>
+        <div class="modal__content">
+  
+            <p>今日のテーマ     : {{tema}}</p>
+            <p>みなさんへの質問 : {{question}}</p>
+            <br><br><br>
+  
+            <form action="/answer" method="POST">
+            <input type="text" name="answer" size="20" maxlength="20">
+            <input type="submit" value="アンケートを送信" name="save">
+            </form>
+
+            <br><br>
+            <a class="js-modal-close" href="">戻る</a>
+        </div><!--modal__inner-->
+    </div><!--modal-->
+  </body>
+  <!-- 以上question_mordal OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO-->
+
+
+
+{% endblock %}

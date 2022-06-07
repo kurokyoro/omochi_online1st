@@ -1,0 +1,138 @@
+#title{
+    background: orange;
+    color: white;
+    text-align: center;
+    margin-top: auto;
+    font-size: 50px;
+
+}
+
+footer{
+    background: black;
+    margin-top: auto;
+}
+
+#wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+img.tw{
+    height: 40px;
+    width: 40px;
+    margin:0 20px;
+}
+
+#sec1{
+    background-color: gray;
+    color: white;
+}
+
+#sec1,#sec2{
+    text-align: center; 
+}
+
+#sec1,#sec2 h1{
+    font-size: 40px;
+}
+
+#sec1,#sec2 p{
+    font-size: 25px;
+}
+
+#footer{
+    text-align: center;
+}
+
+.end{
+    color: black;
+    text-align: center;
+    font-size: 30px;
+}
+
+
+#sec1 {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    color: #232323;
+    background: #fff8e8;
+    border-left: solid 10px orange;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+#sec1 p {
+    margin: 0; 
+    padding: 0;
+}
+
+#icon{
+    float: left;
+    margin-top: 15px;
+    margin-left: 5px;
+}
+
+
+
+
+
+
+
+/* <!-- 以下question_mordalを呼び出す用のボタン OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO--> */
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.content{
+    margin: 0 auto;
+    padding: 40px;
+}
+.modal{
+    display: none;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.modal__bg{
+    background: rgba(0,0,0,0.8);
+    height: 100vh;
+    position: absolute;
+    width: 100%;
+}
+.modal__content{
+    background: #fff;
+    left: 50%;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 60%;
+}
+
+/* <!-- 以上question_mordalを呼び出す用のボタン OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO--> */
+.btn_in{
+    position: relative;
+    display: inline-block;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    color: #FFF;
+    background: #fd9535;/*背景色*/
+    border-bottom: solid 2px #d27d00;/*少し濃い目の色に*/
+    border-radius: 4px;/*角の丸み*/
+    box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+    font-weight: bold;
+}
+
+.btn-in:active {
+    border-bottom: solid 2px #fd9535;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
+}
+
+.omochi{
+    text-align: center;
+}
